@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Course {
     private Category category;
-    private String courseID;
+    private int courseID;
     private String courseName;
     private int creditHours;
-    private List<Integer> prerequisite;
+    private List<String> prerequisite;
 
     private Course(CourseBuilder builder) {
         this.category = builder.category;
@@ -19,17 +19,17 @@ public class Course {
 
     public static class CourseBuilder {
         private Category category;
-        private String courseID;
+        private int courseID;
         private String courseName;
         private int creditHours;
-        private List<Integer> prerequisite;
+        private List<String> prerequisite;
 
         public CourseBuilder category(Category category) {
             this.category = category;
             return this;
         }
 
-        public CourseBuilder courseID(String id) {
+        public CourseBuilder courseID(int id) {
             this.courseID = id;
             return this;
         }
@@ -44,7 +44,7 @@ public class Course {
             return this;
         }
 
-        public CourseBuilder prerequisite(List<Integer> prerequisite) {
+        public CourseBuilder prerequisite(List<String> prerequisite) {
             this.prerequisite = prerequisite;
             return this;
         }
@@ -55,7 +55,7 @@ public class Course {
 
     }
 
-    public String getCourseID() {
+    public  int getCourseID() {
         return courseID;
     }
 
@@ -67,7 +67,7 @@ public class Course {
         return creditHours;
     }
 
-    public List<Integer> getPrerequisite() {
+    public List<String> getPrerequisite() {
         return prerequisite;
     }
 
@@ -75,7 +75,7 @@ public class Course {
         return category;
     }
 
-    public void setCourseID(String courseID) {
+    public void setCourseID(int courseID) {
         this.courseID = courseID;
     }
 
@@ -87,7 +87,7 @@ public class Course {
         this.creditHours = creditHours;
     }
 
-    public void setPrerequisite(List<Integer> prerequisite) {
+    public void setPrerequisite(List<String> prerequisite) {
         this.prerequisite = prerequisite;
     }
 
