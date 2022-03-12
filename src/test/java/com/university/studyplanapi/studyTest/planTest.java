@@ -10,6 +10,6 @@ public class planTest {
 
     @Test
     public void getPlanTest(){
-        System.out.println(service.getStudyPlan(2017));
+        System.out.println(service.getStudyPlan(217));
     }
 }
