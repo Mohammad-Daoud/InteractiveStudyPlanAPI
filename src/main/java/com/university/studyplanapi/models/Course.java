@@ -3,47 +3,57 @@ package com.university.studyplanapi.models;
 import java.util.List;
 
 public class Course {
-   private String courseID;
-   private String courseName;
-   private int creditHours;
-   private List<Integer> prerequisite;
+    private Category category;
+    private String courseID;
+    private String courseName;
+    private int creditHours;
+    private List<Integer> prerequisite;
 
-   private Course(CourseBuilder builder){
-       this.courseID = builder.courseID;
-       this.courseName = builder.courseName;
-       this.creditHours = builder.creditHours;
-       this.prerequisite = builder.prerequisite;
-   }
+    private Course(CourseBuilder builder) {
+        this.category = builder.category;
+        this.courseID = builder.courseID;
+        this.courseName = builder.courseName;
+        this.creditHours = builder.creditHours;
+        this.prerequisite = builder.prerequisite;
+    }
 
-   public static class CourseBuilder{
-       private String courseID;
-       private String courseName;
-       private int creditHours;
-       private List<Integer> prerequisite;
+    public static class CourseBuilder {
+        private Category category;
+        private String courseID;
+        private String courseName;
+        private int creditHours;
+        private List<Integer> prerequisite;
 
+        public CourseBuilder category(Category category) {
+            this.category = category;
+            return this;
+        }
 
-       public CourseBuilder courseID(String id){
-           this.courseID= id;
-           return this;
-       }
-       public CourseBuilder courseName(String courseName){
-           this.courseName= courseName;
-           return this;
-       }
-       public CourseBuilder creditHours(int creditHours){
-           this.creditHours= creditHours;
-           return this;
-       }
-       public CourseBuilder prerequisite(List<Integer> prerequisite){
-           this.prerequisite= prerequisite;
-           return this;
-       }
+        public CourseBuilder courseID(String id) {
+            this.courseID = id;
+            return this;
+        }
 
-       public Course build(){
-           return new Course(this);
-       }
+        public CourseBuilder courseName(String courseName) {
+            this.courseName = courseName;
+            return this;
+        }
 
-   }
+        public CourseBuilder creditHours(int creditHours) {
+            this.creditHours = creditHours;
+            return this;
+        }
+
+        public CourseBuilder prerequisite(List<Integer> prerequisite) {
+            this.prerequisite = prerequisite;
+            return this;
+        }
+
+        public Course build() {
+            return new Course(this);
+        }
+
+    }
 
     public String getCourseID() {
         return courseID;
@@ -59,6 +69,10 @@ public class Course {
 
     public List<Integer> getPrerequisite() {
         return prerequisite;
+    }
+
+    public Category getCategory() {
+        return category;
     }
 
     public void setCourseID(String courseID) {
@@ -77,11 +91,16 @@ public class Course {
         this.prerequisite = prerequisite;
     }
 
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "{" +
-                "courseID:" + courseID +
-                ", courseName:'" + courseName +
+                "category:" + category +
+                ", courseID:'" + courseID + '\'' +
+                ", courseName:'" + courseName + '\'' +
                 ", creditHours:" + creditHours +
                 ", prerequisite:" + prerequisite +
                 '}';

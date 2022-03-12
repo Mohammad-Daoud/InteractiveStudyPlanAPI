@@ -1,6 +1,7 @@
 package com.university.studyplanapi.services;
 
 import com.university.studyplanapi.exception.NotFoundException;
+import com.university.studyplanapi.models.Category;
 import com.university.studyplanapi.models.Course;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +14,14 @@ public class StudyPlanService {
 
     static {
         courseGroup.add(new Course.CourseBuilder()
+                .category(Category.Obligatory_Specialization_Requirements)
                 .courseID("0301131")
                 .courseName("PRINCIPLES OF STATISTICS")
                 .creditHours(3)
                 .prerequisite(null)
                 .build());
         courseGroup.add(new Course.CourseBuilder()
+                .category(Category.Obligatory_Specialization_Requirements)
                 .courseID("0302108")
                 .courseName("PHYSICS FOR COMPUTER SCIENCE")
                 .creditHours(3)
@@ -30,7 +33,7 @@ public class StudyPlanService {
 
     public List<Course> getStudyPlan(int year) {
         List<Course> tempPlanGroup = studyPlan.get(year);
-        if (tempPlanGroup== null)
+        if (tempPlanGroup == null)
             throw new NotFoundException(year + " plan NOT FOUND");
         else
             return tempPlanGroup;
