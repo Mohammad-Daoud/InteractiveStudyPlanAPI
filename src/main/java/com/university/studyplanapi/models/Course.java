@@ -4,32 +4,35 @@ import java.util.List;
 
 public class Course {
     private Category category;
-    private int courseID;
+    private long courseID;
     private String courseName;
     private int creditHours;
-    private List<String> prerequisite;
+    private int preCount;
+    private List<String> prerequisites;
 
     private Course(CourseBuilder builder) {
         this.category = builder.category;
         this.courseID = builder.courseID;
         this.courseName = builder.courseName;
         this.creditHours = builder.creditHours;
-        this.prerequisite = builder.prerequisite;
+        this.preCount = builder.preCount;
+        this.prerequisites = builder.prerequisites;
     }
 
     public static class CourseBuilder {
         private Category category;
-        private int courseID;
+        private long courseID;
         private String courseName;
         private int creditHours;
-        private List<String> prerequisite;
+        private int preCount;
+        private List<String> prerequisites;
 
         public CourseBuilder category(Category category) {
             this.category = category;
             return this;
         }
 
-        public CourseBuilder courseID(int id) {
+        public CourseBuilder courseID(long id) {
             this.courseID = id;
             return this;
         }
@@ -44,8 +47,12 @@ public class Course {
             return this;
         }
 
-        public CourseBuilder prerequisite(List<String> prerequisite) {
-            this.prerequisite = prerequisite;
+        public CourseBuilder preCount(int preCount){
+            this.preCount = preCount;
+            return this;
+        }
+        public CourseBuilder prerequisites(List<String> prerequisite) {
+            this.prerequisites = prerequisite;
             return this;
         }
 
@@ -55,54 +62,63 @@ public class Course {
 
     }
 
-    public  int getCourseID() {
-        return courseID;
-    }
-
-    public String getCourseName() {
-        return courseName;
-    }
-
-    public int getCreditHours() {
-        return creditHours;
-    }
-
-    public List<String> getPrerequisite() {
-        return prerequisite;
-    }
-
     public Category getCategory() {
         return category;
-    }
-
-    public void setCourseID(int courseID) {
-        this.courseID = courseID;
-    }
-
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public void setCreditHours(int creditHours) {
-        this.creditHours = creditHours;
-    }
-
-    public void setPrerequisite(List<String> prerequisite) {
-        this.prerequisite = prerequisite;
     }
 
     public void setCategory(Category category) {
         this.category = category;
     }
 
+    public long getCourseID() {
+        return courseID;
+    }
+
+    public void setCourseID(long courseID) {
+        this.courseID = courseID;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public int getCreditHours() {
+        return creditHours;
+    }
+
+    public void setCreditHours(int creditHours) {
+        this.creditHours = creditHours;
+    }
+
+    public int getPreCount() {
+        return preCount;
+    }
+
+    public void setPreCount(int preCount) {
+        this.preCount = preCount;
+    }
+
+    public List<String> getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(List<String> prerequisites) {
+        this.prerequisites = prerequisites;
+    }
+
     @Override
     public String toString() {
         return "{" +
                 "category:" + category +
-                ", courseID:'" + courseID + '\'' +
-                ", courseName:'" + courseName + '\'' +
-                ", creditHours:" + creditHours +
-                ", prerequisite:" + prerequisite +
+                ",courseID:'" + courseID + '\'' +
+                ",courseName:'" + courseName + '\'' +
+                ",creditHours:" + creditHours +
+                ",preCount:" + preCount +
+                ",prerequisites:" + prerequisites +
                 '}';
     }
 }
