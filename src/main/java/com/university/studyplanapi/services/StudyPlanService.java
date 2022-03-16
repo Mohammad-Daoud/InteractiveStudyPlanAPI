@@ -59,17 +59,30 @@ public class StudyPlanService {
     private void loadPlans(List<Course> courses, BufferedReader bufferedReader) throws IOException {
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            List<String> tempPre = new ArrayList<>();
             String[] data = line.split(",");
-            tempPre.add(data[4]);
             Course course = new Course.CourseBuilder()
                     .category(Category.valueOf(data[0]))
                     .courseID(Integer.parseInt(data[1]))
                     .courseName(data[2])
                     .creditHours(Integer.parseInt(data[3]))
-                    .prerequisite(tempPre)
+                    .prerequisite(prerequisiteLoadHelper(data))
                     .build();
+
             courses.add(course);
         }
+    }
+
+    private List<String> prerequisiteLoadHelper(String[] data){
+        List<String> prerequisiteGroup = new ArrayList<>();
+        int iterator = 4;
+        while(true){
+            try{
+                prerequisiteGroup.add(data[iterator]);
+                iterator++;
+            }catch (IndexOutOfBoundsException e){
+                break;
+            }
+        }
+        return prerequisiteGroup;
     }
 }
