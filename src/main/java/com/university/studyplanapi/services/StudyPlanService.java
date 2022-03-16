@@ -1,7 +1,7 @@
 package com.university.studyplanapi.services;
 
 import com.university.studyplanapi.exception.NotFoundException;
-import com.university.studyplanapi.models.Course;
+import com.university.studyplanapi.model.Course;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

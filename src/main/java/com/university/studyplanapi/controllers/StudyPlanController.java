@@ -1,7 +1,7 @@
 package com.university.studyplanapi.controllers;
 
 
-import com.university.studyplanapi.models.Course;
+import com.university.studyplanapi.model.Course;
 import com.university.studyplanapi.services.IOService;
 import com.university.studyplanapi.services.StudyPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class StudyPlanController {
         return normalService.getStudyPlan(year);
     }
 
-    @GetMapping ("/read/upload")
+    @PostMapping ("/read/upload")
     public List<Course> getCsvPlan(@RequestBody String csvFilePath){
         return ioService.getStudyPlan(csvFilePath);
     }
