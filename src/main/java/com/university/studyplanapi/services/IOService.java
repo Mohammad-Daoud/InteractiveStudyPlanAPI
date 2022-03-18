@@ -57,12 +57,12 @@ public class IOService implements PlanOperation<String> {
         }
     }
 
-    private List<String> prerequisiteLoadHelper(String[] data) {
-        List<String> prerequisiteGroup = new ArrayList<>();
+    private List<Integer> prerequisiteLoadHelper(String[] data) {
+        List<Integer> prerequisiteGroup = new ArrayList<>();
         int iterator = 5;
         while (true) {
             try {
-                prerequisiteGroup.add(data[iterator]);
+                prerequisiteGroup.add(Integer.valueOf(data[iterator]));
                 iterator++;
             } catch (IndexOutOfBoundsException e) {
                 break;
