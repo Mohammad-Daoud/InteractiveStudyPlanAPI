@@ -3,6 +3,7 @@ package com.university.studyplanapi.services;
 import com.university.studyplanapi.exception.NotNumberException;
 import com.university.studyplanapi.model.Category;
 import com.university.studyplanapi.model.Course;
+import com.university.studyplanapi.model.Plan;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Service;
 
@@ -13,14 +14,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.university.studyplanapi.io.DirectoryLoader.getResourceFilePath;
+
 
 @Service
-public class IOService implements PlanOperation<String> {
+public class IOService implements PlanOperation<Plan> {
+    private static final String CSV_EXTENSION = ".csv";
     @Override
-    public List<Course> getStudyPlan(String csvFilePath) {
+    public List<Course> getStudyPlan(Plan planCriteria) {
+        String csvFilePath = planCriteria.toString()+CSV_EXTENSION;
         List<Course> coursers = new ArrayList<>();
         int planYear = fileChecker(csvFilePath);
-        try (FileReader fileReader = new FileReader(csvFilePath);
+        try (FileReader fileReader = new FileReader(getResourceFilePath() + csvFilePath);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             loadPlans(coursers, bufferedReader);
         } catch (Exception e) {
