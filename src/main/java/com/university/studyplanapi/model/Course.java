@@ -8,7 +8,7 @@ public class Course {
     private String courseName;
     private int creditHours;
     private int preCount;
-    private List<Integer> prerequisites;
+    private List<Long> prerequisites;
 
     private Course(CourseBuilder builder) {
         this.category = builder.category;
@@ -25,7 +25,7 @@ public class Course {
         private String courseName;
         private int creditHours;
         private int preCount;
-        private List<Integer> prerequisites;
+        private List<Long> prerequisites;
 
         public CourseBuilder category(Category category) {
             this.category = category;
@@ -51,7 +51,7 @@ public class Course {
             this.preCount = preCount;
             return this;
         }
-        public CourseBuilder prerequisites(List<Integer> prerequisite) {
+        public CourseBuilder prerequisites(List<Long> prerequisite) {
             this.prerequisites = prerequisite;
             return this;
         }
@@ -102,11 +102,11 @@ public class Course {
         this.preCount = preCount;
     }
 
-    public List<Integer> getPrerequisites() {
+    public List<Long> getPrerequisites() {
         return prerequisites;
     }
 
-    public void setPrerequisites(List<Integer> prerequisites) {
+    public void setPrerequisites(List<Long> prerequisites) {
         this.prerequisites = prerequisites;
     }
 
