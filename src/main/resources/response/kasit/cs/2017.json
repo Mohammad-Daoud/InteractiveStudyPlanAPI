@@ -680,8 +680,7 @@
     "creditHours": 3,
     "preCount": 1,
     "prerequisites": [
-      301131,
-      1904255
+      301131
     ]
   },
   {
