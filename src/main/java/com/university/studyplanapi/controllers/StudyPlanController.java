@@ -19,13 +19,11 @@ public class StudyPlanController {
     @Autowired
     private IOService ioService;
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @PostMapping ("/read/get-plan")
     public List<Course> getPlan(@RequestBody Plan planCriteria){
         return normalService.getStudyPlan(planCriteria);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080,")
     @PostMapping ("/read/upload")
     public List<Course> getCsvPlan(@RequestBody Plan planCriteria){
         return ioService.getStudyPlan(planCriteria);
