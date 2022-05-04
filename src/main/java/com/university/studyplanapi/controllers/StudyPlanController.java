@@ -1,8 +1,8 @@
 package com.university.studyplanapi.controllers;
 
 
-import com.university.studyplanapi.model.Course;
-import com.university.studyplanapi.model.Plan;
+import com.university.studyplanapi.model.plan.Course;
+import com.university.studyplanapi.model.plan.Plan;
 import com.university.studyplanapi.services.IOService;
 import com.university.studyplanapi.services.StudyPlanService;
 import org.springframework.beans.factory.annotation.Autowired;

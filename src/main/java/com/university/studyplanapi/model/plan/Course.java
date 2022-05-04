@@ -1,4 +1,4 @@
-package com.university.studyplanapi.model;
+package com.university.studyplanapi.model.plan;
 
 import java.util.List;
 

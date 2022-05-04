@@ -15,16 +15,16 @@
     <h2>Search for study plan</h2>
 
     &emsp; <label for="schoolName">School Name:  </label>
-    <input name="schoolName" type="text" placeholder="School Name" id="schoolName">
+    <input name="schoolName" userType="text" placeholder="School Name" id="schoolName">
     <br/> <br/>
     &emsp; <label for="department">Department:  </label>
-    <input name="department" type="text" placeholder="Department" id="department">
+    <input name="department" userType="text" placeholder="Department" id="department">
     <br/> <br/>
     &emsp; <label for="year">Year:  </label>
-    <input name="year" type="number" min="2000" placeholder="year (after 2000) " id="year">
+    <input name="year" userType="number" min="2000" placeholder="year (after 2000) " id="year">
     <br/> <br/>
-    &emsp;&emsp; &emsp; <button style="color: green" type="submit"> search</button>
-    &ensp; <button style="color: red" type="reset"> clear </button>
+    &emsp;&emsp; &emsp; <button style="color: green" userType="submit"> search</button>
+    &ensp; <button style="color: red" userType="reset"> clear </button>
 
 
 </form>

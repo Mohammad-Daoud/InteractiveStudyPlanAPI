@@ -1,6 +1,6 @@
 package com.university.studyplanapi.io;
 
-import com.university.studyplanapi.model.Plan;
+import com.university.studyplanapi.model.plan.Plan;
 import com.university.studyplanapi.utils.AppLogger;
 
 import java.io.BufferedWriter;

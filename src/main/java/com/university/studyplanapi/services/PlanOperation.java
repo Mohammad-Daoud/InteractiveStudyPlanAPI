@@ -1,6 +1,6 @@
 package com.university.studyplanapi.services;
 
-import com.university.studyplanapi.model.Course;
+import com.university.studyplanapi.model.plan.Course;
 
 import java.util.List;
 

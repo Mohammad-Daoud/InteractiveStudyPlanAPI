@@ -1,9 +1,9 @@
 package com.university.studyplanapi.services;
 
 import com.university.studyplanapi.exception.NotNumberException;
-import com.university.studyplanapi.model.Category;
-import com.university.studyplanapi.model.Course;
-import com.university.studyplanapi.model.Plan;
+import com.university.studyplanapi.model.plan.Category;
+import com.university.studyplanapi.model.plan.Course;
+import com.university.studyplanapi.model.plan.Plan;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Service;
 

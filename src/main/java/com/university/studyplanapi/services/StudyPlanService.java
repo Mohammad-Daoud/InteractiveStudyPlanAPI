@@ -2,8 +2,8 @@ package com.university.studyplanapi.services;
 
 import com.university.studyplanapi.exception.NotFoundException;
 import com.university.studyplanapi.io.DirectoryCreator;
-import com.university.studyplanapi.model.Course;
-import com.university.studyplanapi.model.Plan;
+import com.university.studyplanapi.model.plan.Course;
+import com.university.studyplanapi.model.plan.Plan;
 import com.university.studyplanapi.utils.JSON;
 import org.springframework.stereotype.Service;
 

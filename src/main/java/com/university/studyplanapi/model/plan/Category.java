@@ -1,4 +1,4 @@
-package com.university.studyplanapi.model;
+package com.university.studyplanapi.model.plan;
 
 public enum Category {
     Obligatory_University_Requirements,
