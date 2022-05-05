@@ -9,5 +9,6 @@ public class LoginTest {
         LoginService service = new LoginService();
         System.out.println(service.getCredential("mdaoud","mdaoud"));
         System.out.println(service.getCredential("mhm0173632","mhm0173632"));
+        System.out.println(service.getCredential("hib0123456","hib0123456"));
     }
 }

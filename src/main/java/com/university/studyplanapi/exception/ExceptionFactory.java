@@ -48,4 +48,10 @@ public class ExceptionFactory extends ResponseEntityExceptionHandler {
                 new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(exception, HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(UnauthorizedException.class)
+    public final ResponseEntity<Object> handleNotAuth(Exception ex, WebRequest request) {
+        ExceptionResponse exception =
+                new ExceptionResponse(new Date(), ex.getMessage(), request.getDescription(false));
+        return new ResponseEntity<>(exception, HttpStatus.UNAUTHORIZED);
+    }
 }
