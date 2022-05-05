@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class LoginController {
     @Autowired
-    LoginService service ;
+    private LoginService service ;
 
-    @GetMapping("/read/login")
+    @GetMapping("/login")
     public Object getUserInfo(@RequestParam String username,
                                      @RequestParam String password){
         return service.getCredential(username, password);
