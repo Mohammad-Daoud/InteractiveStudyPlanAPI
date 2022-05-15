@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 import static com.university.studyplanapi.config.DatabaseConfig.getConnection;
 
-public class AdministratorDoi implements GetUserInfo<Administrator>{
+public class AdministratorDoi implements UsersMethods<Administrator> {
     @Override
     public Administrator geInfo(String username, String password, String tableName) {
         Administrator administrator = new Administrator();
@@ -35,5 +35,22 @@ public class AdministratorDoi implements GetUserInfo<Administrator>{
             e.printStackTrace();
         }
         return administrator;
+    }
+
+    @Override
+    public void add(Administrator administrator) {
+        try (Connection conn = getConnection()) {
+            String sql = "insert into Administrator(fname, lname, username, password)" +
+                    " values(?,?,?,?)";
+            PreparedStatement pStmt = conn.prepareCall(sql);
+            pStmt.setString(1, administrator.getFname());
+            pStmt.setString(2, administrator.getLname());
+            pStmt.setString(3, administrator.getUsername());
+            pStmt.setString(4, administrator.getPassword());
+
+            pStmt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

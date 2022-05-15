@@ -1,5 +1,6 @@
 package com.university.studyplanapi.doi.users;
 
+
 public class Administrator {
     private String fname;
     private String lname;

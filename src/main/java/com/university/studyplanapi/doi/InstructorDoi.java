@@ -1,6 +1,5 @@
 package com.university.studyplanapi.doi;
 
-import com.university.studyplanapi.doi.users.Administrator;
 import com.university.studyplanapi.doi.users.Instructor;
 import com.university.studyplanapi.doi.users.UserType;
 
@@ -11,7 +10,7 @@ import java.sql.SQLException;
 
 import static com.university.studyplanapi.config.DatabaseConfig.getConnection;
 
-public class InstructorDoi implements GetUserInfo<Instructor>{
+public class InstructorDoi implements UsersMethods<Instructor> {
     @Override
     public Instructor geInfo(String username, String password, String tableName) {
         Instructor instructor = new Instructor();
@@ -39,5 +38,25 @@ public class InstructorDoi implements GetUserInfo<Instructor>{
             e.printStackTrace();
         }
         return instructor;
+    }
+
+    @Override
+    public void add(Instructor instructor) {
+        try (Connection conn = getConnection()) {
+            String sql = "insert into Instructor(instructorID, fname, lname, username, password, schoolName, depName) " +
+                    " values(?,?,?,?,?,?,?)";
+            PreparedStatement pStmt = conn.prepareCall(sql);
+            pStmt.setLong(1, instructor.getInstructorID());
+            pStmt.setString(3, instructor.getLname());
+            pStmt.setString(2, instructor.getFname());
+            pStmt.setString(4, instructor.getUsername());
+            pStmt.setString(5, instructor.getPassword());
+            pStmt.setString(6, instructor.getSchoolName());
+            pStmt.setString(7, instructor.getDepName());
+
+            pStmt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

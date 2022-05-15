@@ -33,7 +33,7 @@ public class LoginService  {
                 case STUDENT:
                     return getStudent(username, password);
                 default:
-                    throw new NotFoundException("User not found");
+                    throw new UnauthorizedException("Invalid Credential !!");
             }
         }
         throw new UnauthorizedException("Invalid Credential !!");
