@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    public void addStudent(long userID,
-                           String fname,
-                           String lname,
-                           String username,
-                           String password,
-                           String schoolName,
-                           String depName,
-                           int planYear) {
+    public Student addStudent(long userID,
+                              String fname,
+                              String lname,
+                              String username,
+                              String password,
+                              String schoolName,
+                              String depName,
+                              int planYear) {
         Student student = new Student.StudentBuilder()
                 .studentID(userID)
                 .firstName(fname)
@@ -32,15 +32,16 @@ public class UserService {
                 .build();
         StudentDoi studentDoi = new StudentDoi();
         studentDoi.add(student);
+        return student;
     }
 
-    public void addInstructor(long userID,
-                              String fname,
-                              String lname,
-                              String username,
-                              String password,
-                              String schoolName,
-                              String depName) {
+    public Instructor addInstructor(long userID,
+                                    String fname,
+                                    String lname,
+                                    String username,
+                                    String password,
+                                    String schoolName,
+                                    String depName) {
         Instructor instructor = new Instructor.InstructorBuilder()
                 .instructorID(userID)
                 .firstName(fname)
@@ -52,12 +53,13 @@ public class UserService {
                 .build();
         InstructorDoi instructorDoi = new InstructorDoi();
         instructorDoi.add(instructor);
+        return instructor;
     }
 
-    public void addAdmin(String fname,
-                         String lname,
-                         String username,
-                         String password) {
+    public Administrator addAdmin(String fname,
+                                  String lname,
+                                  String username,
+                                  String password) {
         Administrator administrator = new Administrator.AdministratorBuilder()
                 .firstName(fname)
                 .lastName(lname)
@@ -66,5 +68,6 @@ public class UserService {
                 .build();
         AdministratorDoi administratorDoi = new AdministratorDoi();
         administratorDoi.add(administrator);
+        return administrator;
     }
 }

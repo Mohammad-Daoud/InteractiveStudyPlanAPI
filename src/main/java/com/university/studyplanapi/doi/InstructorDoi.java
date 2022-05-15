@@ -54,7 +54,7 @@ public class InstructorDoi implements UsersMethods<Instructor> {
             pStmt.setString(6, instructor.getSchoolName());
             pStmt.setString(7, instructor.getDepName());
 
-            pStmt.executeQuery();
+            ResultSet rs = pStmt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }

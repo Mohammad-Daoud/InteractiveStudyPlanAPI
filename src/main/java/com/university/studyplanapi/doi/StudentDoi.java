@@ -57,7 +57,7 @@ public class StudentDoi implements UsersMethods<Student> {
             pStmt.setString(7, student.getDepName());
             pStmt.setInt(8, student.getPlanYear());
 
-            pStmt.executeQuery();
+            ResultSet rs = pStmt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }

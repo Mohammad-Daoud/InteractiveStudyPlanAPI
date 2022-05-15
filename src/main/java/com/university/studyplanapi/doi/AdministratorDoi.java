@@ -48,7 +48,7 @@ public class AdministratorDoi implements UsersMethods<Administrator> {
             pStmt.setString(3, administrator.getUsername());
             pStmt.setString(4, administrator.getPassword());
 
-            pStmt.executeQuery();
+            ResultSet rs = pStmt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
