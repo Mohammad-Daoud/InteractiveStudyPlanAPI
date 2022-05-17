@@ -5,6 +5,7 @@ import com.university.studyplanapi.io.DirectoryCreator;
 import com.university.studyplanapi.model.plan.Course;
 import com.university.studyplanapi.model.plan.Plan;
 import com.university.studyplanapi.utils.JSON;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -12,31 +13,22 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class StudyPlanService implements PlanOperation<Plan> {
+public class StudyPlanService {
+    @Autowired
+    IOService service;
     private static final Map<Integer, List<Course>> STUDY_PLAN_GROUP = new HashMap<>();
     private static final DirectoryCreator DIRECTORY_WRITER = DirectoryCreator.getInstance();
 
-    @Override
     public List<Course> getStudyPlan(Plan plan) {
-        int year = plan.getYear();
-        List<Course> tempPlanGroup = STUDY_PLAN_GROUP.get(year);
-        if (tempPlanGroup == null || tempPlanGroup.size()==0)
-            loadFromResources(plan);
-        else
-            return tempPlanGroup;
-        return STUDY_PLAN_GROUP.get(year);
+        List<Course> studyPlan = service.getStudyPlan(plan);
+        if (studyPlan == null)
+            throw new NotFoundException("the plan is not found");
+        else return studyPlan;
     }
 
-    private void loadFromResources(Plan plan) {
-        List<Course> planCourse = new IOService().getStudyPlan(plan);
-        List<Course> tempGroup = STUDY_PLAN_GROUP.put(plan.getYear(), planCourse);
-        if ( tempGroup == null || tempGroup.size() == 0 ) {
-            throw new NotFoundException("PLAN "+plan.getSchoolName()
-                    +" "+plan.getDepartmentName()+" "+plan.getYear()+" NOT EXIST !!\n" +
-                    "make sure that all input are entered correctly ");
-        } else
+    public void writeStudyPlan(Plan plan) {
+        List<Course> planCourse = service.getUploadedStudyPlan(plan);
         DIRECTORY_WRITER.writeFile(plan, JSON.toJson(planCourse));
-
     }
 
     public static Map<Integer, List<Course>> getStudyPlanGroup() {

@@ -5,5 +5,5 @@ import com.university.studyplanapi.model.plan.Course;
 import java.util.List;
 
 public interface PlanOperation<T> {
-    List<Course> getStudyPlan(T planCriteria);
+    List<Course> getUploadedStudyPlan(T planCriteria);
 }
