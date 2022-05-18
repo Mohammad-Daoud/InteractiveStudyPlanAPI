@@ -18,6 +18,6 @@ public enum Category {
     }
     public static Category getCategoryByNumber(int number){
         Category[] category = Category.values();
-        return category[number];
+        return category[number-1]; // -1 to handle ArrayIndexOutOfBoundsException
     }
 }

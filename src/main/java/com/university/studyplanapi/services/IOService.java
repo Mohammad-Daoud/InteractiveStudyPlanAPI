@@ -36,10 +36,10 @@ import static com.university.studyplanapi.io.DirectoryLoader.getResourceFilePath
 
 @Service
 public class IOService implements PlanOperation<Plan> {
+    private static final AppLogger LOGGER = AppLogger.create("IOService");
     private static final String CSV_EXTENSION = ".csv";
     private static final String JSON_EXTENSION = ".json";
     private static final String RESPONSE_FILE_PATH = getResourceFilePath() + "response/";
-    private final AppLogger LOGGER = AppLogger.create("IOService");
     private final Path fileStorageLocation;
 
     @Autowired
@@ -69,7 +69,7 @@ public class IOService implements PlanOperation<Plan> {
         return coursers;
     }
 
-    public List<Course> getStudyPlan(Plan planCriteria) {
+    public static List<Course> getStudyPlan(Plan planCriteria) {
         List<Course> studyPlan = new ArrayList<>();
         try (FileReader fileReader = new FileReader(RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION)) {
             studyPlan = new Gson().fromJson(fileReader, new TypeToken<List<Course>>() {

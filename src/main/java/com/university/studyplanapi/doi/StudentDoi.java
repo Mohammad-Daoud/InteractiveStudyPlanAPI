@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.*;
 
 import static com.university.studyplanapi.config.DatabaseConfig.getConnection;
 
@@ -61,6 +62,23 @@ public class StudentDoi implements UsersMethods<Student> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<Long> getTakes(String username) {
+        List<Long> takenGroup = new ArrayList<>();
+        try (Connection conn = getConnection()) {
+            String sql = "SELECT isTaken,takes.courseID FROM Course JOIN Takes ON Course.courseID = Takes.courseID WHERE username = ?";
+            PreparedStatement pStmt = conn.prepareCall(sql);
+            pStmt.setString(1, username);
+            ResultSet rs = pStmt.executeQuery();
+            while (rs.next()){
+                if (rs.getBoolean("isTaken"))
+                    takenGroup.add(rs.getLong("courseID"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return takenGroup;
     }
 }
 

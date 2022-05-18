@@ -1,5 +1,6 @@
 package com.university.studyplanapi.services;
 
+import com.university.studyplanapi.doi.StudentDoi;
 import com.university.studyplanapi.exception.NotFoundException;
 import com.university.studyplanapi.io.DirectoryCreator;
 import com.university.studyplanapi.model.plan.Course;
@@ -16,8 +17,19 @@ import java.util.Map;
 public class StudyPlanService {
     @Autowired
     IOService service;
+
     private static final Map<Integer, List<Course>> STUDY_PLAN_GROUP = new HashMap<>();
     private static final DirectoryCreator DIRECTORY_WRITER = DirectoryCreator.getInstance();
+
+    public Map<String, Object> getStudyPlan(Plan plan, String username) {
+        StudentDoi studentDoi = new StudentDoi();
+        Map<String, Object> studyPlan = new HashMap<>();
+        studyPlan.put("studyPlan", service.getStudyPlan(plan));
+        studyPlan.put("takes", studentDoi.getTakes(username));
+        if (studyPlan.get("studyPlan") == null)
+            throw new NotFoundException("the plan is not found");
+        else return studyPlan;
+    }
 
     public List<Course> getStudyPlan(Plan plan) {
         List<Course> studyPlan = service.getStudyPlan(plan);
