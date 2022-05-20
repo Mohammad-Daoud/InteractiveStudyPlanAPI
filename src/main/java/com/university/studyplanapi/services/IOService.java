@@ -74,7 +74,7 @@ public class IOService implements PlanOperation<Plan> {
         return coursers;
     }
 
-    public static List<Course> getStudyPlan(Plan planCriteria) {
+    public List<Course> getStudyPlan(Plan planCriteria) {
         List<Course> studyPlan = new ArrayList<>();
         studyPlan = getStudyPlanHelper(planCriteria,true);
         assert studyPlan != null;
@@ -82,7 +82,7 @@ public class IOService implements PlanOperation<Plan> {
         return studyPlan;
     }
 
-    private static List<Course> getStudyPlanHelper(Plan planCriteria, boolean isUniversityScope){
+    private List<Course> getStudyPlanHelper(Plan planCriteria, boolean isUniversityScope){
         List<Course> studyPlan = new ArrayList<>();
         String fileName =RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION ;
         if (isUniversityScope)
