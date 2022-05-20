@@ -42,7 +42,14 @@ public class DirectoryCreator {
         }
     }
 
-
+    public synchronized void writeUniversityFile(String content){
+        File file = new File(RESPONSE_FOLDER + "/university/universityPlan.json");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(content);
+        } catch (IOException e) {
+            LOGGER.logError(e);
+        }
+    }
     public static File getResponseFolder() {
         return RESPONSE_FOLDER;
     }

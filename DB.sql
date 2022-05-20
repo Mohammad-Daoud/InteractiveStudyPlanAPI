@@ -19,7 +19,6 @@ insert into Administrator(fname, lname, username, password)  values('Husam', 'Jb
 insert into Administrator(fname, lname, username, password)  values('Hamza', 'Monther','hmonther','hmonther');
 drop table if exists Student;
 CREATE TABLE Student (
-    studentID INT(10) NOT NULL,
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
     username VARCHAR(100) NOT NULL UNIQUE,
@@ -28,13 +27,12 @@ CREATE TABLE Student (
     depName VARCHAR(100) NOT NULL UNIQUE,
     planYear INT(5) NOT NULL,
     userType VARCHAR(10) DEFAULT 'STUDENT',
-    PRIMARY KEY (studentID)
+    PRIMARY KEY (username)
 );
-insert into Student(studentID,fname, lname, username, password, schoolName, depName, planYear) values ('0173632','Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
+insert into Student(fname, lname, username, password, schoolName, depName, planYear) values ('Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
 
 drop table if exists Instructor;
 CREATE TABLE Instructor (
-    instructorID INT(10) NOT NULL,
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
     username VARCHAR(100) NOT NULL UNIQUE,
@@ -42,9 +40,9 @@ CREATE TABLE Instructor (
     schoolName VARCHAR(100) NOT NULL UNIQUE,
     depName VARCHAR(100) NOT NULL UNIQUE,
     userType VARCHAR(10) DEFAULT 'INSTRUCTOR',
-    PRIMARY KEY (instructorID)
+    PRIMARY KEY (username)
 );
-insert into Instructor(instructorID, fname, lname, username, password, schoolName, depName) values ('0123456','Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
+insert into Instructor(fname, lname, username, password, schoolName, depName) values ('Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
 
 
 drop table if exists Course;
@@ -143,10 +141,11 @@ INSERT INTO Course values (302108,"PHYSICS FOR COMPUTER SCIENCE");
 drop table if exists Takes;
 CREATE TABLE Takes (
     courseID INT(7),
-    studentID INT(10),
-    isTaken boolean default false,
+    username varchar(100),
+    isTaken boolean,
     FOREIGN KEY (courseID)
         REFERENCES Course(courseID),
-    FOREIGN KEY (studentID)
-        REFERENCES Student (studentID)
+    FOREIGN KEY (username)
+        REFERENCES Student (username)
 );
+

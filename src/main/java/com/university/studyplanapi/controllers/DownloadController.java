@@ -26,6 +26,12 @@ public class DownloadController {
        return service.download(filePath,request);
     }
 
+    @GetMapping("/downloadFile/uploaded/university/{fileName:.+}")
+    public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) {
+
+        String filePath = "uploaded/university/"+fileName;
+        return service.download(filePath,request);
+    }
     @GetMapping("/getTemplate")
     public ResponseEntity<Resource>downloadTemplate( HttpServletRequest request){
         String filePath = "templates/template.rar";

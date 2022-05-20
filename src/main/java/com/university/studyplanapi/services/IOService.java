@@ -57,21 +57,37 @@ public class IOService implements PlanOperation<Plan> {
     @Override
     public List<Course> getUploadedStudyPlan(Plan planCriteria) {
         String csvFilePath = "uploaded/" + planCriteria.toString() + CSV_EXTENSION;
+        return getCourses(csvFilePath);
+    }
+    public List<Course> getUniversityUploadedStudyPlan(String fileName) {
+        return getCourses(fileName);
+    }
+
+    private List<Course> getCourses(String csvFilePath) {
         List<Course> coursers = new ArrayList<>();
-        int planYear = fileChecker(csvFilePath);
         try (FileReader fileReader = new FileReader(getResourceFilePath() + csvFilePath);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             loadPlans(coursers, bufferedReader);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        StudyPlanService.getStudyPlanGroup().put(planYear, coursers);
         return coursers;
     }
 
     public static List<Course> getStudyPlan(Plan planCriteria) {
         List<Course> studyPlan = new ArrayList<>();
-        try (FileReader fileReader = new FileReader(RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION)) {
+        studyPlan = getStudyPlanHelper(planCriteria,true);
+        assert studyPlan != null;
+        studyPlan.addAll(Objects.requireNonNull(getStudyPlanHelper(planCriteria, false)));
+        return studyPlan;
+    }
+
+    private static List<Course> getStudyPlanHelper(Plan planCriteria, boolean isUniversityScope){
+        List<Course> studyPlan = new ArrayList<>();
+        String fileName =RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION ;
+        if (isUniversityScope)
+            fileName = RESPONSE_FILE_PATH + "university/universityPlan"+ JSON_EXTENSION;
+        try (FileReader fileReader = new FileReader(fileName)) {
             studyPlan = new Gson().fromJson(fileReader, new TypeToken<List<Course>>() {
             }.getType());
             return studyPlan;
@@ -80,7 +96,6 @@ public class IOService implements PlanOperation<Plan> {
             return null;
         }
     }
-
     private Integer fileChecker(String csvFilePath) {
         File fileToCheck = new File(csvFilePath);
         try {
@@ -134,6 +149,18 @@ public class IOService implements PlanOperation<Plan> {
 
         // Normalize file name
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
+        return storeFileHelper(file, fileName, path);
+    }
+
+    public String storeUniversityFile(MultipartFile file) {
+        String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
+        String path = "uploaded/university/"+fileName;
+
+        // Normalize file name
+        return storeFileHelper(file, fileName, path);
+    }
+
+    private String storeFileHelper(MultipartFile file, String fileName, String path) {
         if (FilenameUtils.isExtension(fileName, "csv")) {
             try {
                 // Check if the file's name contains invalid characters

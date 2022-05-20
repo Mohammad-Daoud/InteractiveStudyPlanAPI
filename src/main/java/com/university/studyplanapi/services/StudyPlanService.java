@@ -42,7 +42,10 @@ public class StudyPlanService {
         List<Course> planCourse = service.getUploadedStudyPlan(plan);
         DIRECTORY_WRITER.writeFile(plan, JSON.toJson(planCourse));
     }
-
+    public void writeUniversityPlan(String fileName){
+        List<Course> planCourse = service.getUniversityUploadedStudyPlan(fileName);
+        DIRECTORY_WRITER.writeUniversityFile(JSON.toJson(planCourse));
+    }
     public static Map<Integer, List<Course>> getStudyPlanGroup() {
         return STUDY_PLAN_GROUP;
     }

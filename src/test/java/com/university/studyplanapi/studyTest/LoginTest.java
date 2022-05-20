@@ -35,7 +35,7 @@ public class LoginTest {
         Plan plan = new Plan("kasit","cs",2017);
         List<Course> list = studyPlanService.getStudyPlan(plan);
         /*List<Course> listOne = studyPlanService.getStudyPlan(plan,true);*/
-       // list.parallelStream().forEach(s -> System.out.println("INSERT INTO Takes values ("+s.getCourseID()+",\'hsa0189136\',"+new Random().nextInt(2)+");"));
-       System.out.println(new StudentDoi().getTakes("mhm0173632"));
+
+      // System.out.println(new StudentDoi().getTakes("mhm0173632"));
     }
 }

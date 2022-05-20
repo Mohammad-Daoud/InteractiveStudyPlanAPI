@@ -40,14 +40,16 @@ public class UploadController {
                 file.getContentType(), file.getSize());
     }
 
-    @PostMapping("/uploadMultipleFiles/{schoolName}/{depName}/{planYear}")
-    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files,
-                                                        @PathVariable String schoolName,
-                                                        @PathVariable String depName,
-                                                        @PathVariable int planYear) {
-        return Arrays.asList(files)
-                .stream()
-                .map(file -> uploadFile(file,schoolName,depName,planYear))
-                .collect(Collectors.toList());
+    @PostMapping("/uploadUniversity")
+    public UploadFileResponse uploadMultipleFiles(@RequestParam("file") MultipartFile file) {
+        String fileName = service.storeUniversityFile(file);
+
+        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+                .path("/downloadFile/")
+                .path(fileName)
+                .toUriString();
+        planService.writeUniversityPlan(fileName);
+        return new UploadFileResponse(fileName, fileDownloadUri,
+                file.getContentType(), file.getSize());
     }
 }

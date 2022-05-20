@@ -1,0 +1,286 @@
+[
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 2220100,
+    "courseName": "MILITARY SCIENCES",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400100,
+    "courseName": "NATIONAL CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400101,
+    "courseName": "LEARNING \u0026 RESEARCH SKILLS",
+    "creditHours": 3,
+    "preCount": 3,
+    "prerequisites": [
+      1932099,
+      3201099,
+      302099
+    ]
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400102,
+    "courseName": "COMMUNICATION SKILLS",
+    "creditHours": 3,
+    "preCount": 1,
+    "prerequisites": [
+      3400101
+    ]
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400103,
+    "courseName": "INTRODUCTION TO PHILOSOPHY AND CRITICAL THINKING",
+    "creditHours": 3,
+    "preCount": 1,
+    "prerequisites": [
+      3400101
+    ]
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400104,
+    "courseName": "HUMAN CIVILIZATION",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400105,
+    "courseName": "CAMPUS LIFE AND ETHICS",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 400101,
+    "courseName": "ISLAM AND CONTEMPORARY ISSUES",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 2300101,
+    "courseName": "ARAB-ISLAMIC CIVILIZATION",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 2300102,
+    "courseName": "JORDAN: HISTORY AND CIVILIZATION",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 3400107,
+    "courseName": "GREAT BOOKS",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 3400108,
+    "courseName": "JERUSALEM",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 300102,
+    "courseName": "ENVIRONMENTAL CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 400102,
+    "courseName": "ISLAMIC CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 720100,
+    "courseName": "HEALTH CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 1000102,
+    "courseName": "LEGAL CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 1100100,
+    "courseName": "PHYSICAL FITNESS CULTURE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 1600100,
+    "courseName": "ELECTRONIC COMMERCE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 1601105,
+    "courseName": "MANAGEMENT SKILLS",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 1900101,
+    "courseName": "SOCIAL MEDIA",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 2000100,
+    "courseName": "APPRECIATION OF ARTS",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 2200103,
+    "courseName": "FOREIGN LANGUAGE",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 3400106,
+    "courseName": "SPECIAL SUBJECT",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "Elective_University_Requirements",
+    "courseID": 3400109,
+    "courseName": "ENTREPRENEURSHIP \u0026 CREATIVITY",
+    "creditHours": 3,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 1900150,
+    "courseName": "COMMUNITY SERVICE",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 1902098,
+    "courseName": "COMPUTER SKILLS PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 1932099,
+    "courseName": "BASICS OF COMPUTING",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": [
+      1902098
+    ]
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201098,
+    "courseName": "ARABIC PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201099,
+    "courseName": "BASICS OF ARABIC",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": [
+      3201098
+    ]
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201100,
+    "courseName": "ARABIC LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": [
+      3201099,
+      3201098
+    ]
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202098,
+    "courseName": "ENGLISH PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202099,
+    "courseName": "BASICS OF ENGLISH",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": [
+      3202098
+    ]
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202100,
+    "courseName": "ENGLISH LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": [
+      3202098,
+      3202099
+    ]
+  }
+]
