@@ -5,7 +5,9 @@
     "courseName": "CALCULUS I",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -13,7 +15,9 @@
     "courseName": "DISCRETE MATHEMATICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -51,7 +55,9 @@
     "courseName": "FUNDAMENTALS OF INFORMATION TECHNOLOGY",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -80,7 +86,9 @@
     "courseName": "PRINCIPLES OF STATISTICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -88,7 +96,9 @@
     "courseName": "PHYSICS FOR COMPUTER SCIENCE",
     "creditHours": 2,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -291,7 +301,9 @@
     "courseName": "PROJECT-1",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -309,7 +321,9 @@
     "courseName": "TRAINING",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      2
+    ]
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -492,5 +506,13 @@
     "prerequisites": [
       1904121
     ]
+  },
+  {
+    "category": "ROOT",
+    "courseID": 2,
+    "courseName": "Facility Root",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
   }
 ]

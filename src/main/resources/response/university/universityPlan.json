@@ -5,7 +5,9 @@
     "courseName": "MILITARY SCIENCES",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -13,7 +15,9 @@
     "courseName": "NATIONAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -53,7 +57,9 @@
     "courseName": "HUMAN CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -61,7 +67,9 @@
     "courseName": "CAMPUS LIFE AND ETHICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -69,7 +77,9 @@
     "courseName": "ISLAM AND CONTEMPORARY ISSUES",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -77,7 +87,9 @@
     "courseName": "ARAB-ISLAMIC CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -85,7 +97,9 @@
     "courseName": "JORDAN: HISTORY AND CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -93,7 +107,9 @@
     "courseName": "GREAT BOOKS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -101,7 +117,9 @@
     "courseName": "JERUSALEM",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -109,7 +127,9 @@
     "courseName": "ENVIRONMENTAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -117,7 +137,9 @@
     "courseName": "ISLAMIC CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -125,7 +147,9 @@
     "courseName": "HEALTH CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -133,7 +157,9 @@
     "courseName": "LEGAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -141,7 +167,9 @@
     "courseName": "PHYSICAL FITNESS CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -149,7 +177,9 @@
     "courseName": "ELECTRONIC COMMERCE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -157,7 +187,9 @@
     "courseName": "MANAGEMENT SKILLS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -165,7 +197,9 @@
     "courseName": "SOCIAL MEDIA",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -173,7 +207,9 @@
     "courseName": "APPRECIATION OF ARTS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -181,7 +217,9 @@
     "courseName": "FOREIGN LANGUAGE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -189,7 +227,9 @@
     "courseName": "SPECIAL SUBJECT",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "Elective_University_Requirements",
@@ -197,7 +237,9 @@
     "courseName": "ENTREPRENEURSHIP \u0026 CREATIVITY",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "General_Requirements",
@@ -205,7 +247,9 @@
     "courseName": "COMMUNITY SERVICE",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "General_Requirements",
@@ -213,7 +257,9 @@
     "courseName": "COMPUTER SKILLS PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "General_Requirements",
@@ -231,7 +277,9 @@
     "courseName": "ARABIC PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "General_Requirements",
@@ -260,7 +308,9 @@
     "courseName": "ENGLISH PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": [
+      3
+    ]
   },
   {
     "category": "General_Requirements",
@@ -282,5 +332,13 @@
       3202098,
       3202099
     ]
+  },
+  {
+    "category": "ROOT",
+    "courseID": 3,
+    "courseName": "University Root",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": []
   }
 ]

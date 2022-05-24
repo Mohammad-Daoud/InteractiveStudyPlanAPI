@@ -5,6 +5,7 @@ import com.university.studyplanapi.exception.NotFoundException;
 import com.university.studyplanapi.io.DirectoryCreator;
 import com.university.studyplanapi.model.plan.Course;
 import com.university.studyplanapi.model.plan.Plan;
+import com.university.studyplanapi.utils.IDGenerator;
 import com.university.studyplanapi.utils.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,6 @@ import java.util.Map;
 public class StudyPlanService {
     @Autowired
     IOService service;
-
     private static final Map<Integer, List<Course>> STUDY_PLAN_GROUP = new HashMap<>();
     private static final DirectoryCreator DIRECTORY_WRITER = DirectoryCreator.getInstance();
 
@@ -25,6 +25,7 @@ public class StudyPlanService {
         StudentDoi studentDoi = new StudentDoi();
         Map<String, Object> studyPlan = new HashMap<>();
         studyPlan.put("studyPlan", service.getStudyPlan(plan));
+        studyPlan.put("universityPlan",service.getUniversityPlan(plan));
         studyPlan.put("takes", studentDoi.getTakes(username));
         if (studyPlan.get("studyPlan") == null)
             throw new NotFoundException("the plan is not found");

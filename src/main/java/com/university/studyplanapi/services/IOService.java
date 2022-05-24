@@ -10,6 +10,7 @@ import com.university.studyplanapi.model.plan.Category;
 import com.university.studyplanapi.model.plan.Course;
 import com.university.studyplanapi.model.plan.Plan;
 import com.university.studyplanapi.utils.AppLogger;
+import com.university.studyplanapi.utils.IDGenerator;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -36,6 +37,7 @@ import static com.university.studyplanapi.io.DirectoryLoader.getResourceFilePath
 
 @Service
 public class IOService implements PlanOperation<Plan> {
+    private final IDGenerator ROOT_ID_GENERATOR = IDGenerator.getInstance();
     private static final AppLogger LOGGER = AppLogger.create("IOService");
     private static final String CSV_EXTENSION = ".csv";
     private static final String JSON_EXTENSION = ".json";
@@ -57,17 +59,19 @@ public class IOService implements PlanOperation<Plan> {
     @Override
     public List<Course> getUploadedStudyPlan(Plan planCriteria) {
         String csvFilePath = "uploaded/" + planCriteria.toString() + CSV_EXTENSION;
-        return getCourses(csvFilePath);
-    }
-    public List<Course> getUniversityUploadedStudyPlan(String fileName) {
-        return getCourses(fileName);
+        return getCourses(csvFilePath, true);
     }
 
-    private List<Course> getCourses(String csvFilePath) {
+    public List<Course> getUniversityUploadedStudyPlan(String fileName) {
+        return getCourses(fileName, false);
+    }
+
+    private List<Course> getCourses(String csvFilePath, boolean isFacility) {
         List<Course> coursers = new ArrayList<>();
         try (FileReader fileReader = new FileReader(getResourceFilePath() + csvFilePath);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             loadPlans(coursers, bufferedReader);
+            rootHelper(coursers, isFacility);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -75,18 +79,18 @@ public class IOService implements PlanOperation<Plan> {
     }
 
     public List<Course> getStudyPlan(Plan planCriteria) {
-        List<Course> studyPlan = new ArrayList<>();
-        studyPlan = getStudyPlanHelper(planCriteria,true);
-        assert studyPlan != null;
-        studyPlan.addAll(Objects.requireNonNull(getStudyPlanHelper(planCriteria, false)));
-        return studyPlan;
+        return getStudyPlanHelper(planCriteria, false);
     }
 
-    private List<Course> getStudyPlanHelper(Plan planCriteria, boolean isUniversityScope){
+    public List<Course> getUniversityPlan(Plan planCriteria) {
+        return getStudyPlanHelper(planCriteria, true);
+    }
+
+    private List<Course> getStudyPlanHelper(Plan planCriteria, boolean isUniversityScope) {
         List<Course> studyPlan = new ArrayList<>();
-        String fileName =RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION ;
+        String fileName = RESPONSE_FILE_PATH + planCriteria.toString() + JSON_EXTENSION;
         if (isUniversityScope)
-            fileName = RESPONSE_FILE_PATH + "university/universityPlan"+ JSON_EXTENSION;
+            fileName = RESPONSE_FILE_PATH + "university/universityPlan" + JSON_EXTENSION;
         try (FileReader fileReader = new FileReader(fileName)) {
             studyPlan = new Gson().fromJson(fileReader, new TypeToken<List<Course>>() {
             }.getType());
@@ -96,14 +100,30 @@ public class IOService implements PlanOperation<Plan> {
             return null;
         }
     }
-    private Integer fileChecker(String csvFilePath) {
-        File fileToCheck = new File(csvFilePath);
-        try {
-            String tempFilename = fileToCheck.getName();
-            return Integer.parseInt(FilenameUtils.removeExtension(tempFilename));
-        } catch (NumberFormatException e) {
-            throw new NotNumberException("THE FILE NAME SHOULD BE THE YEAR OF CREATION !");
-        }
+
+    private void rootHelper(List<Course> courses, boolean isFacility) {
+        Course tempCourse = GenerateRoot(isFacility);
+        courses.add(tempCourse);
+        courses.parallelStream().forEach(course -> {
+            if (course.getPrerequisites().isEmpty()
+                    && !Objects.equals(course.getCourseName(), "Facility Root")
+                    && !Objects.equals(course.getCourseName(), "University Root"))
+                course.getPrerequisites().add(tempCourse.getCourseID());
+        });
+    }
+
+    private Course GenerateRoot(boolean isFacility) {
+        String rootName = "University Root";
+        if (isFacility)
+            rootName = "Facility Root";
+        return new Course.CourseBuilder()
+                .category(Category.ROOT)
+                .courseName(rootName)
+                .courseID(ROOT_ID_GENERATOR.generateNewID())
+                .creditHours(0)
+                .preCount(0)
+                .prerequisites(new ArrayList<>())
+                .build();
     }
 
     private void loadPlans(List<Course> courses, BufferedReader bufferedReader) throws IOException {
@@ -145,7 +165,7 @@ public class IOService implements PlanOperation<Plan> {
     }
 
     public String storeFile(MultipartFile file, String schoolName, String depName, int planYear) {
-        String path = "uploaded/"+schoolName + "/" + depName + "/" + planYear + ".csv";
+        String path = "uploaded/" + schoolName + "/" + depName + "/" + planYear + ".csv";
 
         // Normalize file name
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
@@ -154,7 +174,7 @@ public class IOService implements PlanOperation<Plan> {
 
     public String storeUniversityFile(MultipartFile file) {
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
-        String path = "uploaded/university/"+fileName;
+        String path = "uploaded/university/" + fileName;
 
         // Normalize file name
         return storeFileHelper(file, fileName, path);

@@ -13,11 +13,9 @@ public class StudyPlanController {
     private StudyPlanService normalService;
 
 
-    @PostMapping ("/read/get-plan/{username}")
+    @PostMapping("/read/get-plan/{username}")
     public Object getPlan(@RequestBody Plan planCriteria,
-   @PathVariable String username){
-        return normalService.getStudyPlan(planCriteria,username);
-//        return normalService.getStudyPlan(planCriteria);
+                          @PathVariable String username) {
+        return normalService.getStudyPlan(planCriteria, username);
     }
-
 }

@@ -8,43 +8,43 @@ drop table if exists Administrator;
 CREATE TABLE Administrator (
     fname VARCHAR(100),
     lname VARCHAR(100),
-    username VARCHAR(100) NOT NULL,
+    taken VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
     userType VARCHAR(10) DEFAULT 'ADMIN',
-    PRIMARY KEY (username)
+    PRIMARY KEY (taken)
 );
 
-insert into Administrator(fname, lname, username, password) values('Mohammad', 'Daoud','mdaoud','mdaoud');
-insert into Administrator(fname, lname, username, password)  values('Husam', 'Jbr','hjbr','hjbr');
-insert into Administrator(fname, lname, username, password)  values('Hamza', 'Monther','hmonther','hmonther');
+insert into Administrator(fname, lname, taken, password) values('Mohammad', 'Daoud','mdaoud','mdaoud');
+insert into Administrator(fname, lname, taken, password)  values('Husam', 'Jbr','hjbr','hjbr');
+insert into Administrator(fname, lname, taken, password)  values('Hamza', 'Monther','hmonther','hmonther');
 drop table if exists Student;
 CREATE TABLE Student (
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
-    username VARCHAR(100) NOT NULL ,
+    taken VARCHAR(100) NOT NULL ,
     password VARCHAR(255) NOT NULL,
     schoolName VARCHAR(100) NOT NULL ,
     depName VARCHAR(100) NOT NULL ,
     planYear INT(5) NOT NULL,
     userType VARCHAR(10) DEFAULT 'STUDENT',
-    PRIMARY KEY (username)
+    PRIMARY KEY (taken)
 );
-insert into Student(fname, lname, username, password, schoolName, depName, planYear) values ('Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
-insert into Student(fname, lname, username, password, schoolName, depName, planYear) values ('Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
-insert into Student(fname, lname, username, password, schoolName, depName, planYear) values ('Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
+insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
+insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
+insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
 
 drop table if exists Instructor;
 CREATE TABLE Instructor (
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
-    username VARCHAR(100) NOT NULL UNIQUE,
+    taken VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     schoolName VARCHAR(100) NOT NULL UNIQUE,
     depName VARCHAR(100) NOT NULL UNIQUE,
     userType VARCHAR(10) DEFAULT 'INSTRUCTOR',
-    PRIMARY KEY (username)
+    PRIMARY KEY (taken)
 );
-insert into Instructor(fname, lname, username, password, schoolName, depName) values ('Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
+insert into Instructor(fname, lname, taken, password, schoolName, depName) values ('Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
 
 
 drop table if exists Course;
@@ -143,12 +143,12 @@ INSERT INTO Course values (302108,"PHYSICS FOR COMPUTER SCIENCE");
 drop table if exists Takes;
 CREATE TABLE Takes (
     courseID INT(7),
-    username varchar(100),
+    taken varchar(100),
     isTaken boolean,
     FOREIGN KEY (courseID)
         REFERENCES Course(courseID),
-    FOREIGN KEY (username)
-        REFERENCES Student (username)
+    FOREIGN KEY (taken)
+        REFERENCES Student (taken)
 );
 
 -- INSERT INTO Takes values (1900150,'mhm0173632',0);
