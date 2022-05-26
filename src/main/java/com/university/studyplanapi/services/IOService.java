@@ -71,7 +71,7 @@ public class IOService implements PlanOperation<Plan> {
         try (FileReader fileReader = new FileReader(getResourceFilePath() + csvFilePath);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             loadPlans(coursers, bufferedReader);
-            rootHelper(coursers, isFacility);
+//            rootHelper(coursers, isFacility);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -80,6 +80,7 @@ public class IOService implements PlanOperation<Plan> {
 
     public List<Course> getStudyPlan(Plan planCriteria) {
         return getStudyPlanHelper(planCriteria, false);
+
     }
 
     public List<Course> getUniversityPlan(Plan planCriteria) {
@@ -101,45 +102,63 @@ public class IOService implements PlanOperation<Plan> {
         }
     }
 
-    private void rootHelper(List<Course> courses, boolean isFacility) {
-        Course tempCourse = GenerateRoot(isFacility);
-        courses.add(tempCourse);
-        courses.parallelStream().forEach(course -> {
-            if (course.getPrerequisites().isEmpty()
-                    && !Objects.equals(course.getCourseName(), "Facility Root")
-                    && !Objects.equals(course.getCourseName(), "University Root"))
-                course.getPrerequisites().add(tempCourse.getCourseID());
-        });
-    }
+    /*  private void rootHelper(List<Course> courses, boolean isFacility) {
+          Course tempCourse = GenerateRoot(isFacility);
+          courses.add(tempCourse);
+          courses.parallelStream().forEach(course -> {
+              if (course.getPrerequisites().isEmpty()
+                      && !Objects.equals(course.getCourseName(), "Facility Root")
+                      && !Objects.equals(course.getCourseName(), "University Root"))
+                  course.getPrerequisites().add(tempCourse.getCourseID());
+          });
+      }
 
-    private Course GenerateRoot(boolean isFacility) {
-        String rootName = "University Root";
-        if (isFacility)
-            rootName = "Facility Root";
-        return new Course.CourseBuilder()
-                .category(Category.ROOT)
-                .courseName(rootName)
-                .courseID(ROOT_ID_GENERATOR.generateNewID())
-                .creditHours(0)
-                .preCount(0)
-                .prerequisites(new ArrayList<>())
-                .build();
-    }
-
+      private Course GenerateRoot(boolean isFacility) {
+          String rootName = "University Root";
+          if (isFacility)
+              rootName = "Facility Root";
+          return new Course.CourseBuilder()
+                  .category(Category.ROOT)
+                  .courseName(rootName)
+                  .courseID(ROOT_ID_GENERATOR.generateNewID())
+                  .creditHours(0)
+                  .preCount(0)
+                  .prerequisites(new ArrayList<>())
+                  .build();
+      }
+  */
     private void loadPlans(List<Course> courses, BufferedReader bufferedReader) throws IOException {
         String line;
-        String[] Headers = bufferedReader.readLine().split(",");
+        String[] Headers = bufferedReader.readLine().split(",");// to remove header title from csv file
         while ((line = bufferedReader.readLine()) != null) {
             String[] data = line.split(",");
-            Course course = new Course.CourseBuilder()
-                    .category(Category.getCategoryByNumber(Integer.parseInt(data[0])))
-                    .courseID(Long.parseLong(data[1]))
-                    .courseName(data[2])
-                    .creditHours(Integer.parseInt(data[3]))
-                    .preCount(Integer.parseInt(data[4]))
-                    .prerequisites(prerequisiteLoadHelper(data))
-                    .build();
-            courses.add(course);
+            List<Long> preReq = prerequisiteLoadHelper(data);
+            if (preReq.size() == 0) {
+                Course course = new Course.CourseBuilder()
+                        .category(Category.getCategoryByNumber(Integer.parseInt(data[0])))
+                        .courseID(Long.parseLong(data[1]))
+                        .courseName(data[2])
+                        .creditHours(Integer.parseInt(data[3]))
+                        .preCount(Integer.parseInt(data[4]))
+                        .prerequisites(0L)
+                        .build();
+                courses.add(course);
+
+            } else {
+                for (Long iterator : preReq) {
+
+                    Course course = new Course.CourseBuilder()
+                            .category(Category.getCategoryByNumber(Integer.parseInt(data[0])))
+                            .courseID(Long.parseLong(data[1]))
+                            .courseName(data[2])
+                            .creditHours(Integer.parseInt(data[3]))
+                            .preCount(Integer.parseInt(data[4]))
+                            .prerequisites(iterator)
+                            .build();
+
+                    courses.add(course);
+                }
+            }
         }
     }
 
@@ -154,10 +173,7 @@ public class IOService implements PlanOperation<Plan> {
                 }
                 prerequisiteGroup.add(Long.valueOf(req[iterator]));
                 iterator++;
-            } catch (IndexOutOfBoundsException e) {
-                break;
             } catch (Exception e) {
-                e.printStackTrace();
                 break;
             }
         }

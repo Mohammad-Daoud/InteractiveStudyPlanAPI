@@ -5,9 +5,7 @@
     "courseName": "MILITARY SCIENCES",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -15,9 +13,7 @@
     "courseName": "NATIONAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -25,11 +21,23 @@
     "courseName": "LEARNING \u0026 RESEARCH SKILLS",
     "creditHours": 3,
     "preCount": 3,
-    "prerequisites": [
-      1932099,
-      3201099,
-      302099
-    ]
+    "prerequisites": 1932099
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400101,
+    "courseName": "LEARNING \u0026 RESEARCH SKILLS",
+    "creditHours": 3,
+    "preCount": 3,
+    "prerequisites": 3201099
+  },
+  {
+    "category": "Obligatory_University_Requirements",
+    "courseID": 3400101,
+    "courseName": "LEARNING \u0026 RESEARCH SKILLS",
+    "creditHours": 3,
+    "preCount": 3,
+    "prerequisites": 302099
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -37,9 +45,7 @@
     "courseName": "COMMUNICATION SKILLS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      3400101
-    ]
+    "prerequisites": 3400101
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -47,9 +53,7 @@
     "courseName": "INTRODUCTION TO PHILOSOPHY AND CRITICAL THINKING",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      3400101
-    ]
+    "prerequisites": 3400101
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -57,9 +61,7 @@
     "courseName": "HUMAN CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_University_Requirements",
@@ -67,9 +69,7 @@
     "courseName": "CAMPUS LIFE AND ETHICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -77,9 +77,7 @@
     "courseName": "ISLAM AND CONTEMPORARY ISSUES",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -87,9 +85,7 @@
     "courseName": "ARAB-ISLAMIC CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -97,9 +93,7 @@
     "courseName": "JORDAN: HISTORY AND CIVILIZATION",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -107,9 +101,7 @@
     "courseName": "GREAT BOOKS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -117,9 +109,7 @@
     "courseName": "JERUSALEM",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -127,9 +117,7 @@
     "courseName": "ENVIRONMENTAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -137,9 +125,7 @@
     "courseName": "ISLAMIC CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -147,9 +133,7 @@
     "courseName": "HEALTH CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -157,9 +141,7 @@
     "courseName": "LEGAL CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -167,9 +149,7 @@
     "courseName": "PHYSICAL FITNESS CULTURE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -177,9 +157,7 @@
     "courseName": "ELECTRONIC COMMERCE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -187,9 +165,7 @@
     "courseName": "MANAGEMENT SKILLS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -197,9 +173,7 @@
     "courseName": "SOCIAL MEDIA",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -207,9 +181,7 @@
     "courseName": "APPRECIATION OF ARTS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -217,9 +189,7 @@
     "courseName": "FOREIGN LANGUAGE",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -227,9 +197,7 @@
     "courseName": "SPECIAL SUBJECT",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Elective_University_Requirements",
@@ -237,9 +205,7 @@
     "courseName": "ENTREPRENEURSHIP \u0026 CREATIVITY",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "General_Requirements",
@@ -247,9 +213,7 @@
     "courseName": "COMMUNITY SERVICE",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "General_Requirements",
@@ -257,9 +221,7 @@
     "courseName": "COMPUTER SKILLS PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "General_Requirements",
@@ -267,9 +229,7 @@
     "courseName": "BASICS OF COMPUTING",
     "creditHours": 0,
     "preCount": 1,
-    "prerequisites": [
-      1902098
-    ]
+    "prerequisites": 1902098
   },
   {
     "category": "General_Requirements",
@@ -277,9 +237,7 @@
     "courseName": "ARABIC PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "General_Requirements",
@@ -287,9 +245,7 @@
     "courseName": "BASICS OF ARABIC",
     "creditHours": 0,
     "preCount": 1,
-    "prerequisites": [
-      3201098
-    ]
+    "prerequisites": 3201098
   },
   {
     "category": "General_Requirements",
@@ -297,10 +253,15 @@
     "courseName": "ARABIC LANGUAGE SKILLS",
     "creditHours": 0,
     "preCount": 1,
-    "prerequisites": [
-      3201099,
-      3201098
-    ]
+    "prerequisites": 3201099
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201100,
+    "courseName": "ARABIC LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3201098
   },
   {
     "category": "General_Requirements",
@@ -308,9 +269,7 @@
     "courseName": "ENGLISH PLACEMENT TEST",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      3
-    ]
+    "prerequisites": 0
   },
   {
     "category": "General_Requirements",
@@ -318,9 +277,7 @@
     "courseName": "BASICS OF ENGLISH",
     "creditHours": 0,
     "preCount": 1,
-    "prerequisites": [
-      3202098
-    ]
+    "prerequisites": 3202098
   },
   {
     "category": "General_Requirements",
@@ -328,17 +285,14 @@
     "courseName": "ENGLISH LANGUAGE SKILLS",
     "creditHours": 0,
     "preCount": 1,
-    "prerequisites": [
-      3202098,
-      3202099
-    ]
+    "prerequisites": 3202098
   },
   {
-    "category": "ROOT",
-    "courseID": 3,
-    "courseName": "University Root",
+    "category": "General_Requirements",
+    "courseID": 3202100,
+    "courseName": "ENGLISH LANGUAGE SKILLS",
     "creditHours": 0,
-    "preCount": 0,
-    "prerequisites": []
+    "preCount": 1,
+    "prerequisites": 3202099
   }
 ]

@@ -6,8 +6,7 @@ public enum Category {
     Obligatory_Faculty_Requirements(3),
     Obligatory_Specialization_Requirements(4),
     Elective_Specialization_Requirements(5),
-    General_Requirements(6),
-    ROOT(7);
+    General_Requirements(6);
     private final int categoryValue;
 
     Category(final int categoryValue) {

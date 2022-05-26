@@ -5,9 +5,7 @@
     "courseName": "CALCULUS I",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -15,9 +13,7 @@
     "courseName": "DISCRETE MATHEMATICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -25,9 +21,7 @@
     "courseName": "DATA STRUCTURES-1",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1931102
-    ]
+    "prerequisites": 1931102
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -35,9 +29,7 @@
     "courseName": "DOCUMENTATION AND ETHICS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1904101
-    ]
+    "prerequisites": 1904101
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -45,9 +37,7 @@
     "courseName": "INTRODUCTION TO DATABASE SYSTEMS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -55,9 +45,7 @@
     "courseName": "FUNDAMENTALS OF INFORMATION TECHNOLOGY",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -65,9 +53,7 @@
     "courseName": "WEB APPLICATIONS DEVELOPMENT - 1",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1904101
-    ]
+    "prerequisites": 1904101
   },
   {
     "category": "Obligatory_Faculty_Requirements",
@@ -75,10 +61,15 @@
     "courseName": "COMPUTER SKILLS FOR SCIENTIFIC FACULTIES",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1902098,
-      1932099
-    ]
+    "prerequisites": 1902098
+  },
+  {
+    "category": "Obligatory_Faculty_Requirements",
+    "courseID": 1931102,
+    "courseName": "COMPUTER SKILLS FOR SCIENTIFIC FACULTIES",
+    "creditHours": 3,
+    "preCount": 1,
+    "prerequisites": 1932099
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -86,9 +77,7 @@
     "courseName": "PRINCIPLES OF STATISTICS",
     "creditHours": 3,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -96,9 +85,7 @@
     "courseName": "PHYSICS FOR COMPUTER SCIENCE",
     "creditHours": 2,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -106,9 +93,7 @@
     "courseName": "PHYSICS FOR COMPUTER SCIENCE-LAB",
     "creditHours": 1,
     "preCount": 1,
-    "prerequisites": [
-      302108
-    ]
+    "prerequisites": 302108
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -116,11 +101,23 @@
     "courseName": "LOGIC DESIGN",
     "creditHours": 3,
     "preCount": 3,
-    "prerequisites": [
-      302108,
-      302116,
-      1901101
-    ]
+    "prerequisites": 302108
+  },
+  {
+    "category": "Obligatory_Specialization_Requirements",
+    "courseID": 1901204,
+    "courseName": "LOGIC DESIGN",
+    "creditHours": 3,
+    "preCount": 3,
+    "prerequisites": 302116
+  },
+  {
+    "category": "Obligatory_Specialization_Requirements",
+    "courseID": 1901204,
+    "courseName": "LOGIC DESIGN",
+    "creditHours": 3,
+    "preCount": 3,
+    "prerequisites": 1901101
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -128,9 +125,7 @@
     "courseName": "DATA STRUCTURES-2",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -138,9 +133,7 @@
     "courseName": "PROGRAMMING METHODOLOGIES",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -148,9 +141,7 @@
     "courseName": "PROGRAMMING IN SPECIAL LANGUAGES",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901237
-    ]
+    "prerequisites": 1901237
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -158,9 +149,7 @@
     "courseName": "THEORY OF COMPUTATION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901101
-    ]
+    "prerequisites": 1901101
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -168,9 +157,7 @@
     "courseName": "COMPUTER ORGANIZATION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901204
-    ]
+    "prerequisites": 1901204
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -178,9 +165,7 @@
     "courseName": "THEORY OF ALGORITHMS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -188,10 +173,15 @@
     "courseName": "NUMERICAL ANALYSIS",
     "creditHours": 3,
     "preCount": 2,
-    "prerequisites": [
-      301101,
-      1931102
-    ]
+    "prerequisites": 301101
+  },
+  {
+    "category": "Obligatory_Specialization_Requirements",
+    "courseID": 1901351,
+    "courseName": "NUMERICAL ANALYSIS",
+    "creditHours": 3,
+    "preCount": 2,
+    "prerequisites": 1931102
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -199,9 +189,7 @@
     "courseName": "MODELING AND SIMULATION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901234
-    ]
+    "prerequisites": 1901234
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -209,9 +197,7 @@
     "courseName": "COMPUTER GRAPHICS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -219,9 +205,7 @@
     "courseName": "COMPUTER NETWORKS-1",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -229,9 +213,7 @@
     "courseName": "SYSTEMS PROGRAMMING AND MANAGEMENT",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901322
-    ]
+    "prerequisites": 1901322
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -239,10 +221,15 @@
     "courseName": "NETWORK PROGRAMMING",
     "creditHours": 3,
     "preCount": 2,
-    "prerequisites": [
-      1901238,
-      1901362
-    ]
+    "prerequisites": 1901238
+  },
+  {
+    "category": "Obligatory_Specialization_Requirements",
+    "courseID": 1901442,
+    "courseName": "NETWORK PROGRAMMING",
+    "creditHours": 3,
+    "preCount": 2,
+    "prerequisites": 1901362
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -250,9 +237,7 @@
     "courseName": "COMPUTER SECURITY",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901362
-    ]
+    "prerequisites": 1901362
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -260,10 +245,15 @@
     "courseName": "DISTRIBUTED SYSTEMS",
     "creditHours": 3,
     "preCount": 2,
-    "prerequisites": [
-      1901442,
-      1901341
-    ]
+    "prerequisites": 1901442
+  },
+  {
+    "category": "Obligatory_Specialization_Requirements",
+    "courseID": 1901466,
+    "courseName": "DISTRIBUTED SYSTEMS",
+    "creditHours": 3,
+    "preCount": 2,
+    "prerequisites": 1901341
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -271,9 +261,7 @@
     "courseName": "DESIGN AND IMPLEMENTATION OF PROGRAMMING LANGUAGES",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901241
-    ]
+    "prerequisites": 1901241
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -281,9 +269,7 @@
     "courseName": "COMPILER CONSTRUCTION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901241
-    ]
+    "prerequisites": 1901241
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -291,9 +277,7 @@
     "courseName": "OPERATING SYSTEMS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -301,9 +285,7 @@
     "courseName": "PROJECT-1",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -311,9 +293,7 @@
     "courseName": "PROJECT-2",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901496
-    ]
+    "prerequisites": 1901496
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -321,9 +301,7 @@
     "courseName": "TRAINING",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": [
-      2
-    ]
+    "prerequisites": 0
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -331,9 +309,7 @@
     "courseName": "ARTIFICIAL INTELLIGENCE",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Obligatory_Specialization_Requirements",
@@ -341,9 +317,7 @@
     "courseName": "INTRODUCTION TO SOFTWARE ENGINEERING",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1902223
-    ]
+    "prerequisites": 1902223
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -351,9 +325,7 @@
     "courseName": "GRAPH THEORY",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901341
-    ]
+    "prerequisites": 1901341
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -361,10 +333,15 @@
     "courseName": "COMPUTER SYSTEMS PERFORMANCE",
     "creditHours": 3,
     "preCount": 2,
-    "prerequisites": [
-      301131,
-      1901322
-    ]
+    "prerequisites": 301131
+  },
+  {
+    "category": "Elective_Specialization_Requirements",
+    "courseID": 1901446,
+    "courseName": "COMPUTER SYSTEMS PERFORMANCE",
+    "creditHours": 3,
+    "preCount": 2,
+    "prerequisites": 1901322
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -372,9 +349,7 @@
     "courseName": "PATTERN RECOGNITION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901359
-    ]
+    "prerequisites": 1901359
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -382,9 +357,7 @@
     "courseName": "INFORMATION VISUALIZATION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901359
-    ]
+    "prerequisites": 1901359
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -392,9 +365,7 @@
     "courseName": "CERTIFIED SOFTWARE",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -402,9 +373,7 @@
     "courseName": "COMPUTER NETWORKS - 2",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901362
-    ]
+    "prerequisites": 1901362
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -412,9 +381,7 @@
     "courseName": "PARALLEL PROCESSING",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901322
-    ]
+    "prerequisites": 1901322
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -422,9 +389,7 @@
     "courseName": "MULTIMEDIA NETWORKING",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901362
-    ]
+    "prerequisites": 1901362
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -432,9 +397,7 @@
     "courseName": "MOBILE WIRELESS NETWORKS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901362
-    ]
+    "prerequisites": 1901362
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -442,10 +405,15 @@
     "courseName": "OPERATING SYSTEMS PROGRAMMING",
     "creditHours": 3,
     "preCount": 2,
-    "prerequisites": [
-      1901473,
-      1901237
-    ]
+    "prerequisites": 1901473
+  },
+  {
+    "category": "Elective_Specialization_Requirements",
+    "courseID": 1901475,
+    "courseName": "OPERATING SYSTEMS PROGRAMMING",
+    "creditHours": 3,
+    "preCount": 2,
+    "prerequisites": 1901237
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -453,9 +421,7 @@
     "courseName": "SPECIAL TOPICS",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901233
-    ]
+    "prerequisites": 1901233
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -463,9 +429,7 @@
     "courseName": "HUMAN COMPUTER INTERACTION",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901359
-    ]
+    "prerequisites": 1901359
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -473,9 +437,7 @@
     "courseName": "DIGITAL IMAGE PROCESSING",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1901359
-    ]
+    "prerequisites": 1901359
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -483,9 +445,7 @@
     "courseName": "SYSTEMS ANALYSIS AND DESIGN",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1902223
-    ]
+    "prerequisites": 1902223
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -493,9 +453,7 @@
     "courseName": "OPERATIONS RESEARCH",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      301131
-    ]
+    "prerequisites": 301131
   },
   {
     "category": "Elective_Specialization_Requirements",
@@ -503,16 +461,94 @@
     "courseName": "WEB APPLICATION DEVELOPMENT - 2",
     "creditHours": 3,
     "preCount": 1,
-    "prerequisites": [
-      1904121
-    ]
+    "prerequisites": 1904121
   },
   {
-    "category": "ROOT",
-    "courseID": 2,
-    "courseName": "Facility Root",
+    "category": "General_Requirements",
+    "courseID": 1900150,
+    "courseName": "COMMUNITY SERVICE",
     "creditHours": 0,
     "preCount": 0,
-    "prerequisites": []
+    "prerequisites": 0
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 1902098,
+    "courseName": "COMPUTER SKILLS PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": 0
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 1932099,
+    "courseName": "BASICS OF COMPUTING",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 1902098
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201098,
+    "courseName": "ARABIC PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": 0
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201099,
+    "courseName": "BASICS OF ARABIC",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3201098
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201100,
+    "courseName": "ARABIC LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3201099
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3201100,
+    "courseName": "ARABIC LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3201098
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202098,
+    "courseName": "ENGLISH PLACEMENT TEST",
+    "creditHours": 0,
+    "preCount": 0,
+    "prerequisites": 0
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202099,
+    "courseName": "BASICS OF ENGLISH",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3202098
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202100,
+    "courseName": "ENGLISH LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3202098
+  },
+  {
+    "category": "General_Requirements",
+    "courseID": 3202100,
+    "courseName": "ENGLISH LANGUAGE SKILLS",
+    "creditHours": 0,
+    "preCount": 1,
+    "prerequisites": 3202099
   }
 ]
