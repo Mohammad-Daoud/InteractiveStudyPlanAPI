@@ -19,6 +19,7 @@ insert into Administrator(fname, lname, taken, password)  values('Husam', 'Jbr',
 insert into Administrator(fname, lname, taken, password)  values('Hamza', 'Monther','hmonther','hmonther');
 drop table if exists Student;
 CREATE TABLE Student (
+	studentID varchar(10) not null,
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
     taken VARCHAR(100) NOT NULL ,
@@ -29,9 +30,9 @@ CREATE TABLE Student (
     userType VARCHAR(10) DEFAULT 'STUDENT',
     PRIMARY KEY (taken)
 );
-insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
-insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
-insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ('Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
+insert into Student(studentID,fname, lname, taken, password, schoolName, depName, planYear) values ("0173632",'Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
+insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ("0189136",'Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
+insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ("0189136",'Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
 
 drop table if exists Instructor;
 CREATE TABLE Instructor (
