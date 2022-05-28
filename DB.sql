@@ -19,20 +19,20 @@ insert into Administrator(fname, lname, taken, password)  values('Husam', 'Jbr',
 insert into Administrator(fname, lname, taken, password)  values('Hamza', 'Monther','hmonther','hmonther');
 drop table if exists Student;
 CREATE TABLE Student (
-	studentID varchar(10) not null,
+    studentID VARCHAR(10) NOT NULL,
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
-    taken VARCHAR(100) NOT NULL ,
+    username VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    schoolName VARCHAR(100) NOT NULL ,
-    depName VARCHAR(100) NOT NULL ,
+    schoolName VARCHAR(100) NOT NULL,
+    depName VARCHAR(100) NOT NULL,
     planYear INT(5) NOT NULL,
     userType VARCHAR(10) DEFAULT 'STUDENT',
-    PRIMARY KEY (taken)
+    PRIMARY KEY (username)
 );
-insert into Student(studentID,fname, lname, taken, password, schoolName, depName, planYear) values ("0173632",'Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
-insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ("0189136",'Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
-insert into Student(fname, lname, taken, password, schoolName, depName, planYear) values ("0189136",'Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
+insert into Student(studentID,fname, lname, username, password, schoolName, depName, planYear) values ("0173632",'Mohammad', 'Daoud','mhm0173632','mhm0173632','kasit','cs', 2017);
+insert into Student(studentID,fname, lname, username, password, schoolName, depName, planYear) values ("0189136",'Husam', 'Jbr','hsa0189136','hsa0189136','kasit','cis', 2018);
+insert into Student(studentID,fname, lname, username, password, schoolName, depName, planYear) values ("0189136",'Hamza', 'Amerah','hmz0189136','hmz0189136','kasit','cs', 2018);
 
 drop table if exists Instructor;
 CREATE TABLE Instructor (
@@ -144,12 +144,12 @@ INSERT INTO Course values (302108,"PHYSICS FOR COMPUTER SCIENCE");
 drop table if exists Takes;
 CREATE TABLE Takes (
     courseID INT(7),
-    taken varchar(100),
-    isTaken boolean,
+    username VARCHAR(100),
+    isTaken BOOLEAN,
     FOREIGN KEY (courseID)
-        REFERENCES Course(courseID),
-    FOREIGN KEY (taken)
-        REFERENCES Student (taken)
+        REFERENCES Course (courseID),
+    FOREIGN KEY (username)
+        REFERENCES Student (username)
 );
 
 -- INSERT INTO Takes values (1900150,'mhm0173632',0);
