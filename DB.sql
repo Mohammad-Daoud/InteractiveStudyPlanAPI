@@ -8,15 +8,15 @@ drop table if exists Administrator;
 CREATE TABLE Administrator (
     fname VARCHAR(100),
     lname VARCHAR(100),
-    taken VARCHAR(100) NOT NULL,
+    usename VARCHAR(100) NOT NULL,
     password VARCHAR(255) NOT NULL,
     userType VARCHAR(10) DEFAULT 'ADMIN',
-    PRIMARY KEY (taken)
+    PRIMARY KEY (usename)
 );
 
-insert into Administrator(fname, lname, taken, password) values('Mohammad', 'Daoud','mdaoud','mdaoud');
-insert into Administrator(fname, lname, taken, password)  values('Husam', 'Jbr','hjbr','hjbr');
-insert into Administrator(fname, lname, taken, password)  values('Hamza', 'Monther','hmonther','hmonther');
+insert into Administrator(fname, lname, usename, password) values('Mohammad', 'Daoud','mdaoud','mdaoud');
+insert into Administrator(fname, lname, usename, password)  values('Husam', 'Jbr','hjbr','hjbr');
+insert into Administrator(fname, lname, usename, password)  values('Hamza', 'Monther','hmonther','hmonther');
 drop table if exists Student;
 CREATE TABLE Student (
     studentID VARCHAR(10) NOT NULL,
@@ -38,14 +38,14 @@ drop table if exists Instructor;
 CREATE TABLE Instructor (
     fname VARCHAR(100) NOT NULL,
     lname VARCHAR(100) NOT NULL,
-    taken VARCHAR(100) NOT NULL UNIQUE,
+    usename VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     schoolName VARCHAR(100) NOT NULL UNIQUE,
     depName VARCHAR(100) NOT NULL UNIQUE,
     userType VARCHAR(10) DEFAULT 'INSTRUCTOR',
-    PRIMARY KEY (taken)
+    PRIMARY KEY (usename)
 );
-insert into Instructor(fname, lname, taken, password, schoolName, depName) values ('Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
+insert into Instructor(fname, lname, usename, password, schoolName, depName) values ('Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
 
 
 drop table if exists Course;
