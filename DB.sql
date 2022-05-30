@@ -1,4 +1,3 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 DROP SCHEMA IF EXISTS `university`;
 CREATE SCHEMA `university`;
@@ -46,7 +45,7 @@ CREATE TABLE Instructor (
     userType VARCHAR(10) DEFAULT 'INSTRUCTOR',
     PRIMARY KEY (username)
 );
-insert into Instructor(instructorID, fname, lname, username, password, schoolName, depName) values ("0123456.'Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
+insert into Instructor(instructorID, fname, lname, username, password, schoolName, depName) values ('0123456','Heba', 'Saadeh','hib0123456','hib0123456','kasit','cs');
 
 
 drop table if exists Course;
