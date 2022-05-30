@@ -20,8 +20,8 @@ public class DatabaseConfig {
     public static Connection getConnection(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/university" ,
-                    "root", "root");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/university" ,//your link here
+                    "your username", "your password");
             return connection;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -34,6 +34,7 @@ then go to **src/main/resources/application.properties**
 and change the file path of ``file.upload-dir`` properties to the
 `resources` directory on your machine .i.e:
 ```properties
+# your file path 
 file.upload-dir=/Users/mdss4/Documents/GraduationProject/StudyPlanAPI/src/main/resources/
 ```
 
