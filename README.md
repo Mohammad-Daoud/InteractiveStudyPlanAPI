@@ -1,6 +1,6 @@
 # InteractiveStudyPlanAPI
 ## Description
-The REST API for handling all requests from **[Interactive Study Plan REST API](https://github.com/Mohammad-Daoud/InteractiveStudyPlanAPI.git)**.
+The REST API for handling all requests from **[Interactive Study Plan React](https://github.com/Mohammad-Daoud/StudyPlanReact)**.
 and **[Interactive Study Plan Web](https://github.com/Mohammad-Daoud/InteractiveStudyPlanWeb.git)**.
 
 ## Installation
