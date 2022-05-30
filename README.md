@@ -13,7 +13,7 @@ Run the **DB.sql** on your SQL server then you are ready to go !
 Go to **src/main/java/com/university/studyplanapi/config/DatabaseConfig.java**
 and change the url for Database Config of yours .i.e:
 
-```
+```java
 @Configuration
 public class DatabaseConfig {
     @Bean
@@ -30,9 +30,16 @@ public class DatabaseConfig {
     }
 }
 ```
+then go to **src/main/resources/application.properties**
+and change the file path of ``file.upload-dir`` properties to the
+`resources` directory on your machine .i.e:
+```properties
+file.upload-dir=/Users/mdss4/Documents/GraduationProject/StudyPlanAPI/src/main/resources/
+```
+
 
 **NOTE**: Recommended before running the project.
-``` 
+```
 mvn clean  
 ```
 
