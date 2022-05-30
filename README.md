@@ -1,7 +1,7 @@
 # InteractiveStudyPlanAPI
 ## Description
 The REST API for handling all requests from **[Interactive Study Plan REST API](https://github.com/Mohammad-Daoud/InteractiveStudyPlanAPI.git)**.
-and **[Interactive Study Plan Web](https://github.com/Mohammad-Daoud/InteractiveStudyPlanWeb.git)**
+and **[Interactive Study Plan Web](https://github.com/Mohammad-Daoud/InteractiveStudyPlanWeb.git)**.
 
 ## Installation
 You should have ***Maven***, ***JDK 11***, and ***MySQL server .i.e 
