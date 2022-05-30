@@ -12,6 +12,7 @@ Run the **DB.sql** on your SQL server then you are ready to go !
 
 Go to **src/main/java/com/university/studyplanapi/config/DatabaseConfig.java**
 and change the url for Database Config of yours .i.e:
+
 ```
 @Configuration
 public class DatabaseConfig {
