@@ -50,7 +50,7 @@ mvn install -Dmaven.test.skip=true
 
 ## Calls For Test the API
 You can test Each Call using [Swagger](https://swagger.io/) 
-or [PostMan](https://www.postman.com/).
+or [Postman](https://www.postman.com/).
 
 The project includes ***Swagger*** documentation,
 This documentation is for you to know the calls that are implemented in the project.
