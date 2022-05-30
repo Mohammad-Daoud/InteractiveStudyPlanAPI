@@ -10,6 +10,26 @@ MySQL Workbench***.
 Fork the Project or Download the project as a ZIP file.
 Run the **DB.sql** on your SQL server then you are ready to go ! 
 
+Go to **src/main/java/com/university/studyplanapi/config/DatabaseConfig.java**
+and change the url for Database Config of yours .i.e:
+```
+@Configuration
+public class DatabaseConfig {
+    @Bean
+    public static Connection getConnection(){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/university" ,
+                    "root", "root");
+            return connection;
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+```
+
 **NOTE**: Recommended before running the project.
 ``` 
 mvn clean  
